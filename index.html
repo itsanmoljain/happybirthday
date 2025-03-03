@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<style>
+	body, html{
+	height: 100%;
+	margin: 0;
+	}
+
+	.birthdayimg{
+	background-image:url(https://img.freepik.com/free-vector/flat-design-wildflower-heart-background_23-2150435940.jpg);
+	height : 100%;
+	background-position: center;
+	background-size: cover;
+	position:relative;
+	color:rgb(86, 2, 31);
+	font-size:35px;
+	}
+
+
+	.topleft{
+	position:absolute;
+	color:rgb(172, 23, 84);
+	top: 0;
+	left: 12px;
+	}
+
+	.bottomright{
+	position: absolute;
+	color: rgb(172, 23, 84);
+	bottom:0;
+	left: 18px;
+	}
+
+	.middle{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	text-align: center;	
+	}
+
+	hr{
+	margin:auto;
+	width:40%;
+	}
+</style>
+
+<body>
+	<div class="birthdayimg">
+	<div class="topleft">
+		<p>HEY VISHU </p>
+	</div>
+	<div class="middle">
+		<h1>Love you more with each passing second</h1>
+		<hr>
+		<p id="amx" style="font-size:80px"></p>
+	</div>
+	<div class="bottomright">
+		<p><3</p>
+	</div>
+	</div>
+
+
+	<script>
+		var countDownDate = new Date("APRIL 04, 2025 00:00:00").getTime();
+		var x = setInterval(function() {
+			var now = new Date().getTime();
+			var distance = countDownDate - now;
+			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			document.getElementById("amx").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+			if (distance < 0) {
+				clearInterval(x);
+				document.getElementById("amx").innerHTML = "HAPPY BIRTHDAY MY HEART"
+				window.location = "https://youtu.be/l5sgIqzlPXc?si=erlmtojveVFkpsPR";
+			}
+		}, 1000);
+	</script>
+</body>
+</html>
